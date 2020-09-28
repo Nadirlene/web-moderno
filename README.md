@@ -1,2 +1,2 @@
 # web-moderno
- Curso web moderno JS
+ Curso web moderno Java Script
