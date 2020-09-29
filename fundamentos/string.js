@@ -9,4 +9,4 @@ console.log('Escola ' + escola +'!') // concatena
 console.log(escola.replace(3, 'e'))  //substituir o 3 pelo e.
 console.log('Ana, Maria, Pedro'.split(',')) // vai gerar 03 elementos de uma array separados por virgula
 console.log(escola.toUpperCase())  //passa a string para maiusculo
-
+console.log(Math.ceil(6.1))
