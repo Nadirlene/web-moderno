@@ -7,7 +7,7 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="cadastro.php" method="POST">
+    <form id="form-cadastro" action="cadastro.php" method="POST">
 
         <fieldset>
         <legend>Informações Pessoais</legend>
@@ -24,6 +24,49 @@
 
         <input type="hidden" name="id"><br><br> <!--atributo transparente, invisivel-->
 
+        Data:<br>
+        <input type="date" name="data"><br><br>
+        
+        Hora:<br>
+        <input type="time" name="hora"><br><br>
+
+        Mês e ano:<br>
+        <input type="month" name="mes-e-ano"><br><br>
+
+        Semana:<br>
+        <input type="week" name="semana"><br><br>
+
+        Data e hora:<br>
+        <input type="datetime-local" name="data-e-hora" id=""><br><br>
+
+        Mensagem:<br>
+        <textarea name="mensagem" cols="30" rows="5" spellcheck="false"></textarea><br><br> <!--spellcheck: false desabilita o corretor ortografico-->
+        <button type="button">Clique-me</button><nr><br></br>
+
+        <Select name="veiculo">
+            <optgroup label="carros">
+                <option value="camaro">Camaro</option>
+                <option value="hilux">Hilux</option>
+            </optgroup>
+
+            <optgroup label="motos">
+                <option value="pop100">Pop 100</option>
+                <option value="zig-50">Zig 50</option>
+            </optgroup>           
+        </Select>
+        <br><br>
+
+        Escolha um curso:<br>
+        <input name="cursos" list="lista-cursos">
+            <datalist id="lista-cursos">
+                <option value="HTML"></option>
+                <option value="CSS3"></option>
+                <option value="PHP"></option>
+            </datalist>
+
+        <br><br>
+        
+        
         URL:<br>
         <input type="url" name="site"><br><br>
 
@@ -58,6 +101,11 @@
 
         </fieldset>
     </form>
+    <br><br>
+
+    Endereço:<br>
+    <input type="texte" name="endereco" form="form-cadastro">
+
 </body>
 </html>
 
