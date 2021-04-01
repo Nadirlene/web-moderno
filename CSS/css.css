@@ -1,0 +1,34 @@
+/*
+    padding: espaçamento Interno;
+    posso atribuir cada lado individualmente, ou os 4 lados de uma vez em sentido horal.
+os valores atribuidos ao padding + width + height eles se somam
+
+    margin: espaçamento externo;
+
+    color: define a cor do texto;
+    text-align: alinhamento do texto;
+    text-decoratio: adiciona decoração ao texto;
+    text-transform: altera o efeito das letras;
+    text-indente: cria recuo na primeira linha;
+    line-height: altura da linha;
+    direction: altera a direção das letras;
+    letter-spacing: altera o espaço entre as letras;
+    word-spacing: altera o espaço entre as palavras;
+    text-shadow: adiciona sombra ao texto;px, px, px, px, cor;
+    box-sizing: faz com que o tamanho do box fique fixo
+
+    *{font-size: 100%;}
+    p{font-size: 1em;}
+    @font-face e google fonts aula nodiestudio CSS
+    background-color: linear-gradiente
+    
+    float: 
+    position:
+
+    
+
+    overflow: 
+    opacity: transparecncia
+    border-radius: arredonda os cantos
+
+*/
