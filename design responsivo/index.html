@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NodeProp - Especializada em Soluções Digitais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--determino que a largura da minha tela será igual a largura da tela do dispositivo... nivel inicial do zoom = 1-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Agência especializada em Marketing Digital, Criação de Aplicativos Mobile.">
+    <meta name="keywords" content="Agência digital, Marketing, Sites">
+    <meta name="krobots" content="index, follow"> <!--Os motores de buscar vão indexar a index e todos os links que ela encontrar na index-->
+    <meta name="author" content="Nadirlene Oliveira">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/df95e773e0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html"><h1 class="logo">NodeProp - Especializada em Soluções Digitais</h1></a>
+        <button class="btn-menu"><i class="fas fa-bars fa-lg"></i></button>
+        <nav class="menu">
+            <a class="btn-close"><i class="fas fa-times"></i></a>
+            <ul>
+                <li><a href="#">Home</a></li> <!--href="#" para criar um link para o topo da página atual!-->
+                <li><a href="#">Clientes</a></li> 
+                <li><a href="#">Serviços</a></li> 
+                <li><a href="#">Blog</a></li> 
+                <li><a href="#">Quem somos</a></li> 
+                <li><a href="#">Contatos</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="title">
+            <h2>OUSE INOVAR!</h2>
+            <h3>Criamos experiencias e estabelecemos ações estratégicas que conectam marcas e consumidores</h3>
+        </div>
+        <div class="buttons">
+            <button class="btn-cadastrar">Cadastrar <i class="fas fa-arrow-circle-right"></i></button>
+            <button class="btn-sobre">Sobre <i class="fas fa-question-circle"></i></button>
+        </div>
+    </div>
+    <!--SERVIÇOS-->
+    <main class="servicos">
+        <article class="servico">
+            <a href="#"><img src="img/criacoes.jpg" alt="Campanhas publicitárias"></a>
+            <div class="inner">
+                <a href="#">Campanhas publicitárias</a>
+                <h4>Impressos, VTs e Jingles</h4>
+                <p>Se você está precisando de criação de algum maerial em específico, conte com nossa equipe de profissionais. Eles farão toda a campanha publicitária. VT, outdoor, folder, anúncio e muito mais pela sua empresa no mais alto padrão de qualidade. </p>
+            </div>
+        </article>
+        <article class="servico">
+            <a href="#"><img src="img/md.jpg" alt="Marketing Digital"></a>
+            <div class="inner">
+                <a href="#">Marketing Digital</a>
+                <h4>Administração de Redes Sociais</h4>
+                <p>Como agência de publicidade aplicamos estratégias nos meios digitais para que o seu negócio seja visto por milhões de usuários. O Brasil é o 5º país mais conectado do mundo. Por este motivo, o seu negócio não pode ficar por fora do mercado digital. </p>
+            </div>
+        </article>
+        <article class="servico">
+            <a href="#"><img src="img/cs.jpg" alt="Criações de Sites"></a>
+            <div class="inner">
+                <a href="#">Criações de Sites</a>
+                <h4>Administração de Redes Sociais</h4>
+                <p>Agora você pode administrar seu site como e quando quiser. E melhor ainda pois você pode pagar por este serviço, pois desenvolvemos de forma que cabe no seu bolso. Seu site atualizado, com seus últimos produtos, integração com redes sociais, agora é possível. </p>
+            </div>
+        </article>
+    </main>
+    <!--NEWSLETTER-->
+    <section class="newsletter">
+        <h2>Inscreva-se agora!</h2>
+        <h3>Receba novidades, dicas e muito mais</h3>
+        <form>
+            <input type="email" name="email" placeholder="Seu email">
+            <button>Cadastrar</button>
+        </form>
+    </section>
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script> //controle de abrir e fechar o menu por meio de jquery
+        $(".btn-menu").click(function(){
+            $(".menu").show();
+        });
+        $(".btn-close").click(function(){
+            $(".menu").hide();
+        });
+    </script>
+</body>
+</html>
