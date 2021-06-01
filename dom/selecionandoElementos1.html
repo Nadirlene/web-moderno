@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+  <body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+      /*pega o elemento com o id informado através da função getElementById.*/
+      document.getElementById("primeiro").classList.add("destaque");
+
+      /* pega os elementos com a tag informada através da função getElementsByTagName */
+      /* como está pegando mais de um elemento, vai me retornar uma lista*/
+      const divs = document.getElementsByTagName("div");
+
+      /* vou remover a classe destque dos meus elementos div */
+      Array.from(divs).forEach((e) => e.classList.remove("destaque"));
+
+      const divsArray = [...divs];  /* operador spread*/
+      divsArray.forEach((e) => e.classList.add("destaque"));
+
+      const ultimosElementos = document.getElementsByClassName('ultimo')
+      for (let e of ultimosElementos){
+          e.classList.remove('destaque')
+      }
+
+      /* as funções getelement... retornam um HTMLcolectio que tem que ser tranformado em array para manipular, foi apresentado 3 formas diferentes acima */
+    </script>
+  </body>
+</html>

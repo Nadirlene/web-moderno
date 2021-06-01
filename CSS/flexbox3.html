@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Flexbox #03</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/tag.css" />
     <style>
-        /* ... */
-    </style>
-</head>
+      div {
+        border: solid 5px dodgerblue;
+        font-size: 40px;
+      }
 
-<body>
+      .flex-container div {
+        box-sizing: border-box; /* o tamanho da caixa vai considerar a borda*/
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row; /*que já é a padrão quando se define display: felx*/
+      }
+
+      .flex-container div {
+        flex-basis: 100px; /* define a dimensão do elemento dentro do flex-container na dimensão que está definida se é coluna ou linha*/
+        width: 200px; /* só vai pegar esse tamanho se a dimensão trabalhada for coluna, se for linha pega a dimensão flex-basis*/
+      }
+
+      .flex-container div:nth-child(4) {
+        /* grow shrink basis */
+        flex: 3 6 100px;
+      }
+
+      .flex-container {
+          width: 300px;
+          width: 600px;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="flex-container tag nolabel">
-        <div class="tag nolabel">1</div>
-        <div class="tag nolabel">2</div>
-        <div class="tag nolabel">3</div>
-        <div class="tag nolabel">4</div>
+      <div class="tag nolabel">1</div>
+      <div class="tag nolabel">2</div>
+      <div class="tag nolabel">3</div>
+      <div class="tag nolabel">4</div>
     </div>
     <script src="js/tag.js"></script>
-</body>
-
+  </body>
 </html>

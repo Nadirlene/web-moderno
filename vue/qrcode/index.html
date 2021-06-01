@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="js/vue.min.js"></script>
+    <script src="js/qrious.min.js"></script> <!--biblioteca que vai gerar o qrcode -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Gerador de QRCode</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <div>
+            <input
+            type="text"
+            size="25"
+            placeholder="Digite para gerar..."
+            v-model="text"
+            >
+      </div>
+
+      <div v-if="text" class="output">
+          <img :src="newQRCode" alt="QRCode">
+      </div>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          title: "Gerador QRcode",
+          text: "https://www.cod3r.com.br",
+          qrcode: new QRious({ size: 300 }),
+        },
+        computed: {
+          newQRCode() {
+            this.qrcode.value = this.text;
+            return this.qrcode.toDataURL();
+          },
+        },
+
+        //o input que vai receber o texto vai estar associado ao evento ondata
+        // o OnData vai receber um evento, pegar o valor do input e alterar o valor do texto
+        // uma vez que o texto é alterado ele vai gerar um novo qrCode
+        
+      });
+    </script>
+  </body>
+</html>
